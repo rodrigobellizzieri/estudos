@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webserver-new1
+  name: webserver-new1
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: webserver-new1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: webserver-new1
+    spec:
+      containers:
+        - image: nginx:1.14
+          name: nginx
+          resources:
+            limits:
+              cpu: 0.8
+              memory: 128Mi
+            requests:
+              cpu: 0.4
+              memory: 64Mi
