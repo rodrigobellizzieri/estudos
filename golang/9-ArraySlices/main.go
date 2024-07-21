@@ -27,4 +27,16 @@ func main() {
 	slice2 := array2[2:4]
 	fmt.Println(slice2)
 
+	// Array Internos
+	fmt.Println("-------------")
+	slice3 := make([]int32, 10, 15)
+	fmt.Println(slice3)
+	fmt.Println("Tamanho:", len(slice3))
+	fmt.Println("Capacidade:", cap(slice3))
+	slice3 = append(slice3, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+	slice3[1] = 2
+	fmt.Println(slice3)
+	fmt.Println("Tamanho:", len(slice3))
+	fmt.Println("Capacidade:", cap(slice3))
+
 }
